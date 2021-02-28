@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') %>
+
+   <div class=" card-formulario border_form ">
+      <div class="card-title text-center mt-3">ENTER THE DATA</div>
+      <div class="card-body ">
+         <form action="/update/<%= data.id %>" method="POST">
+            <div class="form-group">
+
+
+               <label>Enter Name</label>
+               <input type="text" name="name" value="<%=data.name  %> " class="form-control">
+
+
+               <label>Enter Last Name</label>
+               <input type="text" name="last_name" value="<%= data.last_name %> " class="form-control">
+
+
+               <label>Enter Email</label>
+               <input type="text" name="email" value="<%= data.email %>" class="form-control">
+
+
+               <label>Enter Phone</label>
+               <input type="number" name="phone" value="<%= data.phone %>" class="form-control">
+
+
+               <label>Enter Address</label>
+               <input type="text" name="address" value="<%= data.address%>" class="form-control">
+
+
+            </div>
+            <button type="submit" class="btn btn-danger text-center">Update</button>
+         </form>
+      </div>
+   </div>
+
+
+
+
+
+
+
+   <%- include('partials/footer.ejs') %>
